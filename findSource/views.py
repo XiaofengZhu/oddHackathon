@@ -4,6 +4,8 @@ from django.views.generic import TemplateView, ListView
 
 from findSource.AlchemyTest.processdata import readJson
 
+from findSource.AlchemyTest.calTermId import calTerm
+
 # Create your views here.
 
 class IndexView(TemplateView):
@@ -30,8 +32,17 @@ class ResultView(ListView):
 
     def get_context_data(self, **kwargs):
         context = super(ResultView, self).get_context_data(**kwargs)
-        user_input = self.kwargs['userInput']
-        context['userInput'] = user_input
+        department = self.kwargs['department']
+        context['department'] = department
+
+        year = self.kwargs['year']
+        context['year'] = year
+
+        quater = self.kwargs['quater']
+        context['quater'] = quater
+
+        context['term_id'] = calTerm (year,quater)
+
         return context
 
 class AboutView(TemplateView):
