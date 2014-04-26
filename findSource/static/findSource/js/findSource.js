@@ -15,3 +15,20 @@
 //         }
 //     }
 // });
+
+
+jQuery.fn.exists = function(){return this.length>0;}
+
+$(function() {
+	$.post("/result", {
+	    department: $('#department').val(),
+	    term: $('#term').val(),
+	}, function(data) {
+	    if (data.success) {
+	        window.location.href = data.redirect;
+	    }
+	    else {
+	        alert("Input Error");
+	    }
+	});	
+}
