@@ -1,12 +1,19 @@
 #from django.shortcuts import render
 from django.http import HttpResponse
 from django.views.generic import TemplateView, ListView
-from findSource.AlchemyTest.alchemytest import readArticle
+
+from findSource.AlchemyTest.processdata import readJson
 
 # Create your views here.
 
 class IndexView(TemplateView):
     template_name = 'findSource/index.html'
+
+    def get_queryset(self):
+        list = readJson()
+        print list
+        return list
+
 
     def get_context_data(self, **kwargs):
         context = super(IndexView, self).get_context_data(**kwargs)
@@ -17,7 +24,7 @@ class ResultView(ListView):
 
     def get_queryset(self):
         url = self.kwargs['userInput']
-        # list = readArticle(url)
+        # list = readJson(url)
         # #print list
         # return list
 

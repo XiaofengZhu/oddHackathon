@@ -26,14 +26,22 @@
   <option>5</option>
 </select>
 
+
+<label class="control-label" for="inputSuccess1">Please choose a year</label>
+<select class="form-control">
+% for item in object_list['years']:
+  <option>item</option>
+% endfor
+</select>
+
 <label class="control-label" for="inputSuccess1">Please choose a term</label>
 <select class="form-control">
-  <option>1</option>
-  <option>2</option>
-  <option>3</option>
-  <option>4</option>
-  <option>5</option>
+% for item in object_list['quarters']:
+  <option>item</option>
+% endfor
 </select>
+
+
 
 </div>
 <button id="search" class="btn btn-default">Search</button>
