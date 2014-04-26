@@ -28,15 +28,13 @@ class IndexView(TemplateView):
 class ResultView(ListView):
     template_name = 'findSource/result.html'
 
-    # def get_queryset(self):
-    #     url = self.kwargs['userInput']
-        # list = readJson(url)
-        # #print list
-        # return list
+    def get_queryset(self):
+        department = self.kwargs['department']
+        return department
 
     def get_context_data(self, **kwargs):
         context = super(ResultView, self).get_context_data(**kwargs)
-        department = self.kwargs['department']
+        department = self.get_queryset()
         context['department'] = department
 
         # year = self.kwargs['year']
@@ -46,11 +44,11 @@ class ResultView(ListView):
         # context['quater'] = quater
 
         # context['term_id'] = calTerm (year,quater)
-        
+
         # term = self.kwargs['term']
         # context['term'] = term
 
-        context['term_id'] = calTerm (term)
+        # context['term_id'] = calTerm (term)
         return context
 
 class AboutView(TemplateView):
