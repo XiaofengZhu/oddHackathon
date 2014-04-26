@@ -1,12 +1,12 @@
-import json
+import sys, json
 
 def readJson():
 
 	#return list
 	output = {}
 
-	f=open('/static/findSource/data/termDetails.txt','r')
-    jsonObj=json.loads(f.read())
+	f = open('/static/findSource/data/termDetails.txt','r')
+	jsonObj = json.loads(f.read())
 
 	# for obj in jsonObj:  
 	#     termDict={}
