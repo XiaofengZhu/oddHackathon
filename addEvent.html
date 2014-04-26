@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<!-- saved from url=(0053)file:///Users/leoliu/Downloads/jscalendarExample.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Add Event</title>
+<script src="./addEvent_files/jquery.min.js"></script>
+<script>
+window.onload = (function(){
+        $('form#demo_calendar')[0].url.value = window.location.href;
+        $('button').click(function(){
+            $('form#demo_calendar')[0].path.value = this.value;
+            });
+
+        $('form#demo_calendar').submit(function(e){
+            var a = {
+DURATION: (new Date(this.end.value)).getTime()-(new Date(this.start.value)).getTime()
+};
+var form = this;
+window.open( this.path.value.replace(/\{\$(.*?)\}/ig, function(m,p1){
+        p1 = p1.toLowerCase();
+
+        if( (p1 in form) )
+        a[p1] = form[p1].value;
+
+        if(!(p1 in a)&&!a[p1]){
+        return '';
+        }
+        return ((p1 in a)?encodeURIComponent(a[p1]):m);
+        }));
+
+return false;
+});
+});
+</script>
+<style>
+body{
+    white-space:pre;
+    font-family:"Lucida Console";
+}
+img{
+height:16px;
+}
+</style>
+</head>
+<body><h1>Add Event</h1><form method="get" id="demo_calendar" target="_blank">  <input type="hidden" name="path" value="http://calendar.yahoo.com/?v=60&amp;VIEW=d&amp;in_loc={$LOCATION}&amp;type=20&amp;TITLE={$SUMMARY}&amp;ST={$START}Z&amp;DUR={$DURATION}&amp;URL={$URL}&amp;DESC={$MESSAGE}">
+Summary:  <input type="text" name="summary" value="Dance Party">
+Message:  <input type="text" name="message" value="Great music, fancy dress and free">
+URL:      <input type="text" name="url" value="">
+Location: <input type="text" name="location" value="Boogaloo, London">
+Start:    <input type="text" name="end" value="20100416T020000">
+End:      <input type="text" name="start" value="20100415T180000">
+
+<button type="submit" name="calendar" value="http://www.google.com/calendar/event?action=TEMPLATE&amp;text={$SUMMARY}&amp;location={$LOCATION}&amp;dates={$START}Z/{$END}Z&amp;trp=true&amp;sprop=website:{$URL}&amp;details={$MESSAGE}"><img src="./addEvent_files/favicon_v2010.ico">Google</button><button type="submit" name="calendar" value="http://calendar.live.com/calendar/calendar.aspx?rru=addevent&amp;dtstart={$START}&amp;dtend={$END}&amp;summary={$SUMMARY}&amp;location={$LOCATION}"><img src="./addEvent_files/favicon.ico">Windows Live</button><button type="submit" name="calendar" value="http://calendar.yahoo.com/?v=60&amp;VIEW=d&amp;in_loc={$LOCATION}&amp;type=20&amp;TITLE={$SUMMARY}&amp;ST={$START}Z&amp;DUR={$DURATION}&amp;URL={$URL}&amp;DESC={$MESSAGE}"><img src="./addEvent_files/favicon(1).ico"> Yahoo </button>
+</form>
+
+
+
+</body></html>
