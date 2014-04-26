@@ -4,7 +4,7 @@ from django.views.generic import TemplateView, ListView
 
 from findSource.AlchemyTest.processdata import readJson
 from findSource.AlchemyTest.calTermId import calTerm
-# from findSource.AlchemyTest.buildGraph import  getGraph
+from findSource.AlchemyTest.buildGraph import  getGraph
 # Create your views here.
 
 class IndexView(TemplateView):
@@ -40,7 +40,7 @@ class ResultView(TemplateView):
         context['term'] = term
 
         context['term_id'] = calTerm (term)
-        # context['graph']=getGraph(term,key_word)
+        context['graph']=getGraph(term,key_word)
         
         return context
 
