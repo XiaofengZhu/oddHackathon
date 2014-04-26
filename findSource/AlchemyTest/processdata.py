@@ -1,10 +1,25 @@
-import sys, json
+import urllib
+import json
 
 def readJson():
 
 	#return list
-	f = open("termDetails.txt")
-	jsonObj = json.loads(f.read())
+	output={}
+
+	url="http://vazzak2.ci.northwestern.edu/terms/"
+	page=urllib.urlopen(url)
+	data=page.read()
+
+	dict_data=json.loads(data)
+
+	# output['years']=dict_data['year']
+	# output['quater']=dict_data['quater']
+	# output['id']=dict_data['id']
+
+	# print dict_data[0]['name']
+
+	# f = open("termDetails.txt")
+	# jsonObj = json.loads(f.read())
 
 
 	# for obj in jsonObj:  
@@ -22,5 +37,8 @@ def readJson():
 	# terms= list(set([i['quater']for i in jsonObj]))
 	# output['quaters'] = quaters
 
-	f.close()
-	return jsonObj
+	# f.close()
+	# return jsonObj
+
+	return dict_data
+
