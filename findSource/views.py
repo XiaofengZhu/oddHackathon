@@ -25,7 +25,7 @@ class IndexView(TemplateView):
         context['terms'] = self.get_terms()             
         return context
 
-class ResultView(ListView):
+class ResultView(TemplateView):
     template_name = 'findSource/result.html'
 
     def get_queryset(self):
@@ -34,7 +34,7 @@ class ResultView(ListView):
 
     def get_context_data(self, **kwargs):
         context = super(ResultView, self).get_context_data(**kwargs)
-        department = self.get_queryset()
+        department = self.kwargs['department']
         context['department'] = department
 
         # year = self.kwargs['year']
