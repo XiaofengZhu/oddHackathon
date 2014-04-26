@@ -1,4 +1,4 @@
-from Sourcefinder.settings import *
+from hackathon.settings import *
 
 DATABASES = {
     'default': {
