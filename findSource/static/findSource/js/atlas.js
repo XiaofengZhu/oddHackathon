@@ -37,7 +37,7 @@
           // pt2:  {x:#, y:#}  target position in screen coords
 
           var weight = null // Math.max(1,edge.data.border/100)
-          var color = "black" // edge.data.color
+          var color = "white" // edge.data.color
           if (!color || (""+color).match(/^[ \t]*$/)) color = null
 
           if (color!==undefined || weight!==undefined){
@@ -126,10 +126,9 @@
       		selected = nearest = dragged = particleSystem.nearest(p);
 
       		if (selected.node !== null){
-            dragged.node.tempMass = 50;
-            dragged.node.fixed = true;
+            dragged.node.tempMass = 50
+            dragged.node.fixed = true
       		}
-          alert(nearest.node.name);
       		return false
       	});
 
@@ -157,7 +156,8 @@
       		dragged = null;
       		selected = null
       		return false
-      	});      	      
+      	});
+      	      
       },
             
     }
@@ -201,7 +201,7 @@
         return false
       },
       selectMap:function(map_id){
-        $.getJSON(""+map_id+".json",function(data){
+        $.getJSON("maps/"+map_id+".json",function(data){
           // load the raw data into the particle system as is (since it's already formatted correctly for .merge)
           var nodes = data.nodes
           $.each(nodes, function(name, info){
