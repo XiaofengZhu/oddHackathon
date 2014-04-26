@@ -3,8 +3,8 @@ from django.http import HttpResponse
 from django.views.generic import TemplateView, ListView
 
 from findSource.AlchemyTest.processdata import readJson
-from findSource.AlchemyTest.processdata import calTerm
-from findSource.AlchemyTest.processdata import  buildGraph
+from findSource.AlchemyTest.calTermId import calTerm
+from findSource.AlchemyTest.buildGraph import  getGraph
 # Create your views here.
 
 class IndexView(TemplateView):
