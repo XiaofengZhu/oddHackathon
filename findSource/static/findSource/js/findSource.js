@@ -1,5 +1,5 @@
 $("#search").click(function (){
-    var key_word = $('#keyword').val();
+    var key_word = $('#user-input').val();
     var term = $('#term').val();    
     if (key_word){
         current_url = window.location.pathname;
