@@ -5,6 +5,7 @@ import datetime;
 import icalendar;
 from datetime import datetime;
 import pytz
+import os.path;
 from icalendar import vCalAddress, vText
 from icalendar import vDatetime
 from icalendar import Calendar, Event
@@ -41,12 +42,16 @@ def next_weekday(d, weekday):
 #next_monday = next_weekday(d, 0) # 0 = Monday, 1=Tuesday, 2=Wednesday...
 #print(next_monday)
 #####################################
-option = input('options:\n \t type a if you have your html file in this folder\n \t type b if you have a list of course nums to input\n');
-if(option.lower()=='a'):
-    fileDirectory = input('please enter your html file name with no .html extention. Example: \'enrollment\' \n');
-    if fileDirectory==None:
-        fileDirectory='enrollment'
-    soup = BeautifulSoup(open('./'+fileDirectory+'_files/SA_LEARNER_SERVICES.SSS_STUDENT_CENTER.html'))
+option = input('options:\n \t type a if you have your html file in this folder\n \t type b if you have a list of course nums to input\n\t type c if you are lazy and have named html to be enrollment\n');
+if(option.lower()=='a'or option.lower()=='c'):
+    if(option.lower()=='a'):
+        fileDirectory = input('please enter your html file name with no .html extention. Example: \'enrollment\' \n');
+    else:
+        fileDirectory = 'enrollment'
+    if os.path.isfile('./'+fileDirectory+'_files/SA_LEARNER_SERVICES.SSS_STUDENT_CENTER.html'):
+        soup = BeautifulSoup(open('./'+fileDirectory+'_files/SA_LEARNER_SERVICES.SSS_STUDENT_CENTER.html'))
+    else:
+        soup = BeautifulSoup(open('./'+fileDirectory+'_files/SA_LEARNER_SERVICES.SSS_STUDENT_CENTER.htm'))
     classes = soup.findAll("span", { "class" : "PSHYPERLINKDISABLED" })
     classIds = [];
     for c in classes:
@@ -58,10 +63,10 @@ if(option.lower()=='a'):
             classIds.append(classnum);
 else:
     classIds = input('Please enter the list of course nums here. Example: [40613,40615]\n');#those are just examples for classIds
-print classIds;
+print 'class numbers:', classIds;
 
 #classIds = [40613,40615]
-print "skipped original course numbers", "new course number: ",classIds
+#print "skipped original course numbers", "new course number: ",classIds
 classesInfo = {};
 #creating calendar
 cal = Calendar();
@@ -69,7 +74,7 @@ for classId in classIds:
     data = requests.get('http://vazzak2.ci.northwestern.edu/courses/?class_num='+str(classId))
     classesInfo[classId] = {};
     if(len(data.json())==0):
-        print "no information was found for course num ",classId
+        print "no information was found for course num ",classId,'\n'
         continue;
     classesInfo[classId] = data.json()[-1];
     print 'meeting days:',classesInfo[classId]['meeting_days']
