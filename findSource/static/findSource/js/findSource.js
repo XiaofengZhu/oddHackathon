@@ -3,7 +3,7 @@ $("#search").click(function (){
     var term = $('#term').val();    
     if (department){
         current_url = window.location.pathname;
-        window.location.href = current_url + department+term;
+        window.location.href = current_url +?+department+term;
     }
 });
 
