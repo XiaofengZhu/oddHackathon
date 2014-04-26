@@ -46,8 +46,9 @@ class ResultView(ListView):
         # context['quater'] = quater
 
         # context['term_id'] = calTerm (year,quater)
-        term = self.kwargs['term']
-        context['term'] = term
+        
+        # term = self.kwargs['term']
+        # context['term'] = term
 
         context['term_id'] = calTerm (term)
         return context
