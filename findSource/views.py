@@ -46,7 +46,7 @@ class ResultView(TemplateView):
 
         graph=getGraph(term_id,key_word)
         context['graph']=graph
-        f = open('asia.json','w')
+        f = open('findSource/templates/findSource/maps/asia.json','w')
         context['graphpath']=os.path.abspath('asia.json')        
         f.write(json.dumps(graph))
         f.close()
