@@ -6,4 +6,4 @@ class IndexView(RedirectView):
     query_string = True
 
     def get_redirect_url(self):
-        return '/hackathon'
+        return '/Sourcerous'
