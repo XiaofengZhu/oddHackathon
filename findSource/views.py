@@ -28,8 +28,8 @@ class IndexView(TemplateView):
 class ResultView(ListView):
     template_name = 'findSource/result.html'
 
-    def get_queryset(self):
-        url = self.kwargs['userInput']
+    # def get_queryset(self):
+    #     url = self.kwargs['userInput']
         # list = readJson(url)
         # #print list
         # return list
