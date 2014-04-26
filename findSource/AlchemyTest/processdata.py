@@ -24,6 +24,5 @@ def readJson():
 	# output['quaters'] = quaters
 
 	f.close()
-
-	# return output
-	return jsonObj
+	output['term']=jsonObj
+	return output
