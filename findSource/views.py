@@ -45,8 +45,8 @@ class ResultView(TemplateView):
 
         # context['term_id'] = calTerm (year,quater)
 
-        # term = self.kwargs['term']
-        # context['term'] = term
+        term = self.kwargs['term']
+        context['term'] = term
 
         # context['term_id'] = calTerm (term)
         return context
