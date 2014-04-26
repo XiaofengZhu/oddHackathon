@@ -60,7 +60,7 @@ else:
     classIds = input('Please enter the list of course nums here. Example: [40613,40615]\n');#those are just examples for classIds
 print classIds;
 
-classIds = [40613,40615]
+#classIds = [40613,40615]
 print "skipped original course numbers", "new course number: ",classIds
 classesInfo = {};
 #creating calendar
@@ -71,16 +71,27 @@ for classId in classIds:
     if(len(data.json())==0):
         print "no information was found for course num ",classId
         continue;
-    classesInfo[classId] = data.json()[0];
-    classesInfo[classId]['meeting_days'] = convert_meeting_days(classesInfo[classId]['meeting_days'])
+    classesInfo[classId] = data.json()[-1];
+    print 'meeting days:',classesInfo[classId]['meeting_days']
+    if classesInfo[classId]['meeting_days'] != None:
+        classesInfo[classId]['meeting_days'] = convert_meeting_days(classesInfo[classId]['meeting_days'])
+    else:
+        print 'skipping course_num: ',classId,' because of no meeting_days'
+    print 'processing course title:',classesInfo[classId]['title']
     for meetDay in classesInfo[classId]['meeting_days']:
         startDate = classesInfo[classId]['start_date']+' 00:00:00';
         startDate = datetime.strptime(startDate, '%Y-%m-%d %H:%M:%S')
         startDate = next_weekday(startDate,meetDay) 
         startDate = startDate.strftime("%Y-%m-%d") 
         startTime = classesInfo[classId]['start_time'];
+        if startTime==None:
+            print 'course start time not availble. Skipping. Course_num: ',classId
+            continue;
         tempStartDate = startDate;
         endTime = classesInfo[classId]['end_time'];
+        if endTime==None:
+            print 'course end time not availble. Skipping. Course_num: ',classId
+            continue;
         endTime = tempStartDate+ ' '+ endTime;
         endTime = datetime.strptime(endTime, '%Y-%m-%d %H:%M:%S')
         startTime = tempStartDate + ' '+startTime;
@@ -94,7 +105,10 @@ for classId in classIds:
         print 'days:', days;
         weeks = days/7+1  
         event = Event();
-        event.add('summary', classesInfo[classId]['title']);
+        if(classesInfo[classId]['topic']!=None):
+            event.add('summary', classesInfo[classId]['topic']+classesInfo[classId]['title']);
+        else:
+            event.add('summary',classesInfo[classId]['title']);
         event.add('dtstart',startTime)
         event.add('dtend',endTime)
         event.add('rrule',{'freq':'weekly','count':weeks});
@@ -103,6 +117,6 @@ for classId in classIds:
         
         
 print cal;        
-f = open('test.ics','wb')
+f = open('courses.ics','wb')
 f.write(cal.to_ical());
 f.close(); 
