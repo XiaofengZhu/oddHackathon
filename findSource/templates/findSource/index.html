@@ -68,14 +68,11 @@
   <br>
 
   % if result:
-    <label class="control-label" for="inputSuccess1">Please choose a quater</label>
+    <label class="control-label" for="inputSuccess1">Please choose a term</label>
     <select class="form-control" id="quater">
-
-      <option>Spring</option>  
-      <option>Summer</option>
-      <option>Fall</option>
-      <option>Winter</option> 
-
+      % for item in result:
+        <option>item['name']</option>   
+      %endfor
     </select>
   % endif
 
