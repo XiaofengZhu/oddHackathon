@@ -2,13 +2,17 @@
 <%def name="title()">Wildcat Course Network</%def>
 <%def name="js_defer()">
     ${ parent.js_defer()}
-    <script type="text/javascript" src="/static/findSource/js/findSource.js"></script>
+      <script src="/static/findSource/js/lib/jquery-1.6.1.min.js"></script>
+      <script src="/static/findSource/js/lib/arbor.js"></script>
+      <script src="/static/findSource/js/lib/atlas.js"></script>
+      <script src="/static/findSource/js/lib/jquery.min.js"></script>
+      <script src="/static/findSource/js/lib/docs.min.js"></script>
+    </script>
 </%def>
 
 <%def name="css_files()">
     ${ parent.css_files() }
 </%def>
-
 
 <body>
   <div id="maps">
@@ -16,15 +20,6 @@
     <ul></ul>
   </div>
   <canvas id="viewport" width="1200" height="600"></canvas>
-
-  <script src="/static/findSource/js/lib/jquery-1.6.1.min.js"></script>
-  <script src="/static/findSource/js/lib/arbor.js"></script>
-  <script src="atlas.js"></script>
-
-
-    <script src="./wildcat_files/jquery.min.js"></script>
-    <script src="./wildcat_files/bootstrap.min.js"></script>
-    <script src="./wildcat_files/docs.min.js"></script>
   
 
 <iframe width="0" height="0" frameborder="0" src="about:blank" id="GINGER_SOFTWARE_contextMenuIFrame" scrolling="no" style="border: 0px solid; z-index: 2147483647; height: 0px; width: 0px; background-color: transparent;"></iframe><iframe width="0" height="0" frameborder="0" src="about:blank" id="GINGER_SOFTWARE_bubblesIFrame" scrolling="no" style="border: 0px solid; position: absolute; z-index: 2147483647; height: 0px; width: 0px; background-color: transparent;"></iframe><div id="GingerWidgetInfo" style="display:none;">{"version":"0.1.0.402","isExtension":true,"extensionName":"Chrome"}</div></body></html>
