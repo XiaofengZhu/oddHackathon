@@ -3,9 +3,13 @@ import sys, json
 def readJson():
 
 	#return list
+	output = {}
+	output['title'] ="title"
+	output['year'] ="year"
 
 	f = open("termDetails.txt")
 	jsonObj = json.loads(f.read())
+
 
 	# for obj in jsonObj:  
 	#     termDict={}
@@ -23,4 +27,4 @@ def readJson():
 	# output['quaters'] = quaters
 
 	f.close()
-	return jsonObj
+	return output
