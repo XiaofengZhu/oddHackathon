@@ -1,9 +1,9 @@
 $("#search").click(function (){
-    var department = $('#department').val();
+    var key_word = $('#key_word').val();
     var term = $('#term').val();    
-    if (department){
+    if (key_word){
         current_url = window.location.pathname;
-        window.location.href = current_url + department+'/'+term;
+        window.location.href = current_url + key_word+'/'+term;
     }
 });
 

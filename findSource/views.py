@@ -2,9 +2,7 @@
 from django.http import HttpResponse
 from django.views.generic import TemplateView, ListView
 
-from findSource.AlchemyTest.processdata import readJson
-
-from findSource.AlchemyTest.calTermId import calTerm
+from findSource.AlchemyTest.processdata import readJson, calTerm, buildGraph
 
 # Create your views here.
 
@@ -29,21 +27,13 @@ class ResultView(TemplateView):
     template_name = 'findSource/result.html'
 
     def get_queryset(self):
-        department = self.kwargs['department']
-        return department
+        key_word = self.kwargs['key_word']
+        return key_word
 
     def get_context_data(self, **kwargs):
         context = super(ResultView, self).get_context_data(**kwargs)
-        department = self.get_queryset()
-        context['department'] = department
-
-        # year = self.kwargs['year']
-        # context['year'] = year
-
-        # quater = self.kwargs['quater']
-        # context['quater'] = quater
-
-        # context['term_id'] = calTerm (year,quater)
+        key_word = self.get_queryset()
+        context['key_word'] = key_word
 
         term = self.kwargs['term']
         context['term'] = term
