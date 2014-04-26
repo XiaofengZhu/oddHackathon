@@ -53,6 +53,35 @@ class ResultView(TemplateView):
 
         return context
 
+
+class Result_View(TemplateView):
+    template_name = 'findSource/result.html'
+
+    def get_queryset(self):
+        key_word = self.kwargs['key_word']
+        return key_word
+
+    def get_context_data(self, **kwargs):
+        context = super(ResultView, self).get_context_data(**kwargs)
+        key_word = self.get_queryset()
+        context['key_word'] = key_word
+
+        term = self.kwargs['term']
+        context['term'] = term
+
+        term_id= calTerm (term)
+        context['term_id'] =term_id
+
+        graph=getGraph(term_id,key_word)
+        context['graph']=graph
+        f = open('asia.json','w')
+
+        context['graphpath']=os.path.abspath('asia.json')      
+          
+        f.write(json.dumps(graph))
+        f.close()
+
+        return context
 class AboutView(TemplateView):
     template_name = 'findSource/about.html'
 

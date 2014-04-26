@@ -6,6 +6,7 @@ urlpatterns = patterns('',
         url(r'^$', views.IndexView.as_view(), name='index'),
         url(r'^about$', views.AboutView.as_view(), name = 'about'),
         url(r'^(?P<key_word>.*)/(?P<term>.*)$', views.ResultView.as_view(), name='results'),
+        url(r'^(?P<key_word>.*)/(?P<term>.*)$', views.Result_View.as_view(), name='result'),        
 )
 
 urlpatterns += patterns('django.contrib.staticfiles.views',
