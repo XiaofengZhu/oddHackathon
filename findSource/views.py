@@ -41,9 +41,10 @@ class ResultView(TemplateView):
         term = self.kwargs['term']
         context['term'] = term
 
-        context['term_id'] = calTerm (term)
+        # context['term_id'] 
+        term_id= calTerm (term)
 
-        graph=getGraph(term,key_word)
+        graph=getGraph(term_id,key_word)
         context['graph']=graph
         f = open('asia.json','w')
         f.write(json.dumps(graph))
