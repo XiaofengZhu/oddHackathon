@@ -19,7 +19,7 @@ structure
 =======*/
 body{color:#565656;}
 .doc{width:960px; margin:0 auto; line-height: 1.7; font-size:12px; font-family: Arial; position:relative;}
-a:link, a:visited{text-decoration: none; color:#006cb1; outline: none;}
+a:link, a:visited{text-decoration: none; color:#684871; outline: none;}
 a:hover, a:active{text-decoration: underline;}
 input{outline:none; color: #565656;}
 textarea{color: #565656;}
