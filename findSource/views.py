@@ -19,6 +19,7 @@ class IndexView(TemplateView):
 
     def get_context_data(self, **kwargs):
         context = super(IndexView, self).get_context_data(**kwargs)
+        context['result'] = self.get_queryset()        
         return context
 
 class ResultView(ListView):
