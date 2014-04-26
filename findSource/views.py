@@ -25,7 +25,7 @@ class IndexView(TemplateView):
         return context
 
 class ResultView(TemplateView):
-    template_name = 'findSource/results.html'
+    template_name = 'findSource/result.html'
 
     def get_queryset(self):
         key_word = self.kwargs['key_word']
@@ -41,7 +41,7 @@ class ResultView(TemplateView):
 
         context['term_id'] = calTerm (term)
         context['graph']=getGraph(term,key_word)
-
+        
         f = open("asia.json","w")
         f.write(json.dumps(graph))
         f.close()
