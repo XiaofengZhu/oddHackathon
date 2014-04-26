@@ -6,7 +6,7 @@ def readJson():
 	output = []
 
 	f = open('/static/findSource/data/termDetails.txt','r')
-	jsonObj = json.loads(f.read())
+	jsonObj = json.read(f.read())
 
 	# for obj in jsonObj:  
 	#     termDict={}
@@ -24,5 +24,5 @@ def readJson():
 	# output['quaters'] = quaters
 
 	f.close()
-	# output['term']=jsonObj
+	output['term']=jsonObj
 	return output
