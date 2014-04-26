@@ -3,7 +3,7 @@ $("#search").click(function (){
     var term = $('#term').val();    
     if (key_word){
         current_url = window.location.pathname;
-        window.location.href = current_url +term;
+        window.location.href = current_url + key_word+'/'+term;
     }
 });
 
