@@ -3,7 +3,7 @@ import sys, json
 def readJson():
 
 	#return list
-	output = []
+	output = {}
 
 	f = open('/static/findSource/data/termDetails.txt','r')
 	jsonObj = json.loads(f.read())
@@ -23,4 +23,4 @@ def readJson():
 
 	f.close()
 
-	return output
+	return years
