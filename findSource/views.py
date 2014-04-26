@@ -42,9 +42,9 @@ class ResultView(TemplateView):
         context['term_id'] = calTerm (term)
         context['graph']=getGraph(term,key_word)
         
-        f = open("asia.json","w")
-        f.write(json.dumps(graph))
-        f.close()
+        # f = open("asia.json","w")
+        # f.write(json.dumps(graph))
+        # f.close()
 
         return context
 
