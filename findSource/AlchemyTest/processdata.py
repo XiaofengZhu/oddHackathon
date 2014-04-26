@@ -5,7 +5,7 @@ def readJson():
 	#return list
 	output = {}
 
-    f=open("/static/findSource/data/termDetails.txt","r")
+	f=open('/static/findSource/data/termDetails.txt','r')
     jsonObj=json.loads(f.read())
 
 	# for obj in jsonObj:  
