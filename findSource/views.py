@@ -5,6 +5,8 @@ from django.views.generic import TemplateView, ListView
 from findSource.AlchemyTest.processdata import readJson
 from findSource.AlchemyTest.calTermId import calTerm
 from findSource.AlchemyTest.buildGraph import  getGraph
+
+import json
 # Create your views here.
 
 class IndexView(TemplateView):
