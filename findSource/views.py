@@ -40,6 +40,8 @@ class ResultView(TemplateView):
         context['term'] = term
 
         context['term_id'] = calTerm (term)
+        context['graph']=getGraph(term,key_word)
+        
         return context
 
 class AboutView(TemplateView):

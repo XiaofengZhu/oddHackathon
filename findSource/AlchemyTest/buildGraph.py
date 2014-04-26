@@ -1,6 +1,5 @@
 import json
 from os import walk
-import networkx
 import re
 import random
 import itertools
