@@ -48,7 +48,7 @@ class ResultView(TemplateView):
         term = self.kwargs['term']
         context['term'] = term
 
-        # context['term_id'] = calTerm (term)
+        context['term_id'] = calTerm (term)
         return context
 
 class AboutView(TemplateView):
