@@ -25,4 +25,4 @@ def readJson():
 
 	f.close()
 	output['term']=jsonObj
-	return output
+	return jsonObj
