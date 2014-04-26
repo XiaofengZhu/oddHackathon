@@ -1,0 +1,328 @@
+<html dir='ltr' lang='en'>
+<!-- Copyright (c) 2000, 2011, Oracle and/or its affiliates. All rights reserved. --><!-- CHROME/34.0/MAC; ToolsRel=8.52.10; User=LLZ002; DB=S9PROD/ORACLE; AppServ=//ses852papp1.ci.northwestern.edu:9000; -->
+<body tabindex='-1' class='PSPAGE'>
+<script id="ptPgltReloadThis" type="text/javascript">
+var doRefresh = false;if (document.cookie == '')doRefresh = true;else{var psTokIdx = document.cookie.indexOf('PS_TOKEN=');if ((psTokIdx < 0) || document.cookie.charAt(psTokIdx+10) == ';') doRefresh = true;}if (doRefresh) document.location.reload(true);
+</script>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel='stylesheet' type='text/css' href='https://ses.ent.northwestern.edu/cs/caesar/cache_PT852/PSSTYLEREQ_1.css'>
+<link rel='stylesheet' type='text/css' href='https://ses.ent.northwestern.edu/cs/caesar/cache_PT852/PSSTYLEDEF_SWAN_1.css'>
+<script type="text/javascript" language='JavaScript'>
+var  totalTimeoutMilliseconds = 1800000; 
+var  warningTimeoutMilliseconds = 1680000; 
+var timeOutURL = 'https://ses.ent.northwestern.edu/psp/caesar_9/EMPLOYEE/HRMS/?cmd=expire';
+var timeoutWarningPageURL = 'https://ses.ent.northwestern.edu/psc/caesar_9/EMPLOYEE/HRMS/s/WEBLIB_TIMEOUT.PT_TIMEOUTWARNING.FieldFormula.IScript_TIMEOUTWARNING';
+</script>
+
+<script type="text/javascript" language='JavaScript'>
+var winParent = null;
+var modalID = null;
+var modalZoomName = null;
+var baseKey_win9 = "\x1b";
+var altKey_win9 = "05678\xbc\xbe\xbf\xde2";
+var ctrlKey_win9 = "JK";
+var saveWarningKeys_win9 = "A2;";
+var bAccessibility_win9 =false;
+var bDoModal_win9 = false;
+var bPromptPage_win9 = false;
+var bTabOverTB_win9 = false;
+var bTabOverPg_win9 = false;
+var bTabOverNonPS_win9 = false;
+var strCurrUrl='https://ses.ent.northwestern.edu/psp/caesar_9/EMPLOYEE/HRMS/c/NWSS_PAGELETS.NWSS_ENRL_PGLT.GBL?EMPLID=2819176';
+var modalCloseUrl = 'https://ses.ent.northwestern.edu/cs/caesar/cache_PT852/PT_PORTAL_IC_CLOSE_1.gif';
+var modalCloseAlt = 'Close';
+var modalResizeUrl= 'https://ses.ent.northwestern.edu/cs/caesar/cache_PT852/PT_RESIZE_IMG_1.gif';
+var modalResizeAlt = 'Drag to resize';
+var modalMoveAlt = 'Drag to move';
+</script>
+
+<script type="text/javascript" language='JavaScript'>
+try {
+document.domain = "ent.northwestern.edu";
+}
+catch(err) {;}
+</script>
+
+<script language='JavaScript' type='text/javascript' src='https://ses.ent.northwestern.edu/cs/caesar/cache_PT852/PT_PAGESCRIPT_win9_1.js'>
+</script>
+
+<script language='JavaScript' type='text/javascript' src='https://ses.ent.northwestern.edu/cs/caesar/cache_PT852/PT_EDITSCRIPT_win9_1.js'>
+</script>
+
+<script language='JavaScript' type='text/javascript' src='https://ses.ent.northwestern.edu/cs/caesar/cache_PT852/PT_POPUPSCRIPT_win9_1.js'>
+</script>
+
+<script language='JavaScript' type='text/javascript' src='https://ses.ent.northwestern.edu/cs/caesar/cache_PT852/PT_GRIDSCRIPT_win9_1.js'>
+</script>
+
+<script language='JavaScript' type='text/javascript' src='https://ses.ent.northwestern.edu/cs/caesar/cache_PT852/PT_TYPEAHEAD_win9_1.js'>
+</script>
+
+<script type="text/javascript" language='JavaScript'>
+var nResubmit=0;
+var nLastAction=0;
+var loader=null;
+setupTimeout2();
+var postUrl_win9='https://ses.ent.northwestern.edu/psp/caesar_9/EMPLOYEE/HRMS/c/NWSS_PAGELETS.NWSS_ENRL_PGLT.GBL';
+function aAction_win9(form, name, params, bAjax, bPrompt)
+{
+setupTimeout2();
+if ((name != '#ICSave'))
+processing_win9(1,3000);
+aAction0_win9(form, name, params, bAjax, bPrompt);
+}
+if ((name != '#ICSave'))
+function submitAction_win9(form, name)
+{
+setupTimeout2();
+if(!preSubmitWorkCenter_win9(form, name)) return;
+if (name.indexOf('#ICQryDownload')==-1) { processing_win9(1,3000); }
+preSubmitProcess_win9(form, name);
+var spellcheckpos = name.indexOf('$spellcheck');
+if ((spellcheckpos != -1) && (name.indexOf('#KEYA5') != -1))
+    form.ICAction.value = name.substring(0,spellcheckpos);
+else 
+    form.ICAction.value=name;
+var actionName = form.ICAction.value;
+form.ICXPos.value=ptCommonObj2.getScrollX();
+form.ICYPos.value=ptCommonObj2.getScrollY();
+if (!ptCommonObj2.isAJAXReq(form, name) && !ptCommonObj2.isPromptReq(name)){
+if (nLastAction == 1 && nResubmit > 0) return;
+form.ICResubmit.value=nResubmit;
+form.submit();
+if (name.indexOf('#ICQryDownload')==-1)
+    nResubmit++;
+}
+else if (ptCommonObj2.isPromptReq(name))
+    pAction_win9(form, name, arguments[2]);
+else
+    aAction_win9(form, actionName);}
+</script>
+
+<script type="text/javascript" language='javascript'>
+function dateitemrefs()
+{
+this.pt_dateheader = "https://ses.ent.northwestern.edu/cs/caesar/cache_PT852/PT_DATE_HEADER_1.gif";
+this.pt_datering = "https://ses.ent.northwestern.edu/cs/caesar/cache_PT852/PT_CURRENT_DATE_1.gif";
+this.pt_datesel = "https://ses.ent.northwestern.edu/cs/caesar/cache_PT852/PT_SELECTED_DATE_1.gif";
+this.pt_nextmonth = "https://ses.ent.northwestern.edu/cs/caesar/cache_PT852/PT_RIGHT_SCROLL_1.GIF";
+this.pt_prevmonth= "https://ses.ent.northwestern.edu/cs/caesar/cache_PT852/PT_LEFT_SCROLL_1.GIF";
+this.pt_daystitle_hijri = "https://ses.ent.northwestern.edu/cs/caesar/cache_PT852/PT_DATE_TITLE_S6_1.gif";
+this.pt_daystitle_thai = "https://ses.ent.northwestern.edu/cs/caesar/cache_PT852/PT_DATE_TITLE_S0_1.gif";
+this.pt_daystitle_s0 = "https://ses.ent.northwestern.edu/cs/caesar/cache_PT852/PT_DATE_TITLE_S0_1.gif";
+this.pt_daystitle_m1 = "https://ses.ent.northwestern.edu/cs/caesar/cache_PT852/PT_DATE_TITLE_M1_1.gif";
+this.pt_daystitle_t2 = "https://ses.ent.northwestern.edu/cs/caesar/cache_PT852/PT_DATE_TITLE_T2_1.gif";
+this.pt_daystitle_w3 = "https://ses.ent.northwestern.edu/cs/caesar/cache_PT852/PT_DATE_TITLE_W3_1.gif";
+this.pt_daystitle_t4 = "https://ses.ent.northwestern.edu/cs/caesar/cache_PT852/PT_DATE_TITLE_T4_1.gif";
+this.pt_daystitle_f5 = "https://ses.ent.northwestern.edu/cs/caesar/cache_PT852/PT_DATE_TITLE_F5_1.gif";
+this.pt_daystitle_s6 = "https://ses.ent.northwestern.edu/cs/caesar/cache_PT852/PT_DATE_TITLE_S6_1.gif";
+}
+ 
+function LoadCalendar()
+{
+var dateitems = new dateitemrefs();
+loadImages(dateitems);
+}
+function DatePrompt_win9(dtfield,promptfield,yrfmt,bsubmit)
+{
+setupTimeout2();
+openDate_win9(dtfield, promptfield, "MDY/"+yrfmt,bsubmit,"G",0);
+}
+</script>
+
+<script type="text/javascript" language='JavaScript' ptdefer='defer'>
+if (typeof ptStyleSheet == "undefined") {
+var ptStyleSheet = 'PSSTYLEDEF_SWAN';
+}
+function onLoadExt_win9() {
+modalZoomName = null;
+setKeyEventHandler_win9();doModalOnLoad_win9(false);
+objToBeFocus = null;
+if (typeof oWin == 'undefined') setEventHandlers_win9('ICFirstAnchor_win9', 'ICLastAnchor_win9', false);
+ else
+ oWin.setEventHandlers_win9('ICFirstAnchor_win9', 'ICLastAnchor_win9', false);
+processing_win9(0,3000);
+ptConsole2.enable();
+
+GenerateABN();
+GenerateFakeBC();if (typeof(myAppsWindowOpenJS) != 'undefined' && myAppsWindowOpenJS != null && myAppsWindowOpenJS != '')
+ {
+try {eval(myAppsWindowOpenJS);} catch(e) {}
+  myAppsWindowOpenJS=null;
+}
+ResetGlyph_win9();
+setPageletInfoInCtxmenu_win9("true");}
+try{ptEvent.load(onLoadExt_win9);}catch(e){}
+</script>
+
+<div id='pt_typeahead0'><span id='pt_typeahead' class='spanTextDropdown'>&nbsp;</span></div>
+
+<div id='WAIT_win9' style='display:none;position:absolute;right:0;top:20px;'><img id='processing' align='left' src='https://ses.ent.northwestern.edu/cs/caesar/cache_PT852/PT_PROCESSING_1.gif' alt='Processing... please wait' title='Processing... please wait'></div>
+
+<div id='SAVED_win9' style='display:none;position:absolute;right:0;'>
+<table border='0' cellpadding='0' cellspacing='0'>
+<tr>
+<td><img src='https://ses.ent.northwestern.edu/cs/caesar/cache_PT852/PTPORTAL_POPBOX_LEFT_1.gif' width='7' height='39' border='0' alt=''></td>
+<td id='saveWait_win9' width='35' align='center' valign='middle' background='https://ses.ent.northwestern.edu/cs/caesar/cache_PT852/PTPORTAL_POPBOX_CENTER_1.gif'><img src='https://ses.ent.northwestern.edu/cs/caesar/cache_PT852/PT_LOADER_1.gif' width='24' height='24' alt=''></td>
+<td nowrap='nowrap' background='https://ses.ent.northwestern.edu/cs/caesar/cache_PT852/PTPORTAL_POPBOX_CENTER_1.gif'><span id='ptStatusText_win9' dir='ltr' class='PSPROCESSING'>&nbsp;</span></td>
+<td><img src='https://ses.ent.northwestern.edu/cs/caesar/cache_PT852/PTPORTAL_POPBOX_RIGHT_1.gif' width='6' height='39' alt=''></td>
+<td>&nbsp;</td>
+</tr>
+</table>
+</div>
+
+<a name='ICFirstAnchor_win9'></a> 
+
+<form name='win9' method='post' action="https://ses.ent.northwestern.edu/psp/caesar_9/EMPLOYEE/HRMS/c/NWSS_PAGELETS.NWSS_ENRL_PGLT.GBL" autocomplete='off' class='PSForm'>
+<div id='win9divPSHIDDENFIELDS' style='display:none'><input type='hidden' name='ICType' id='ICType' value='Panel'><input type='hidden' name='ICElementNum' id='ICElementNum' value='9'><input type='hidden' name='ICStateNum' id='ICStateNum' value='2'><input type='hidden' name='ICAction' id='ICAction' value='None'><input type='hidden' name='ICXPos' id='ICXPos' value='0'><input type='hidden' name='ICYPos' id='ICYPos' value='0'><input type='hidden' name='ResponsetoDiffFrame' id='ResponsetoDiffFrame' value='-1'><input type='hidden' name='TargetFrameName' id='TargetFrameName' value='None'><input type='hidden' name='GSrchRaUrl' id='GSrchRaUrl' value='None'><input type='hidden' name='FacetPath' id='FacetPath' value='None'><input type='hidden' name='ICFocus' id='ICFocus' value=''><input type='hidden' name='ICSaveWarningFilter' id='ICSaveWarningFilter' value='0'><input type='hidden' name='ICChanged' id='ICChanged' value='0'><input type='hidden' name='ICResubmit' id='ICResubmit' value='0'><input type='hidden' name='ICSID' id='ICSID' value='3YedxQzAynoCswY/o+XDVWVbW4Zmm/SqBYZNmFAsh8w='><input type='hidden' name='ICActionPrompt' id='ICActionPrompt' value='false'><input type='hidden' name='ICFromPagelet' id='ICFromPagelet' value='true'><input type='hidden' name='ICResubmitURL' id='ICResubmitURL' value=''><input type='hidden' name='ICContentURL' id='ICContentURL' value='https://ses.ent.northwestern.edu/psc/caesar_9/EMPLOYEE/HRMS/c/NWSS_PAGELETS.NWSS_ENRL_PGLT.GBL'><input type='hidden' name='ICFind' id='ICFind' value=''><input type='hidden' name='ICAddCount' id='ICAddCount' value=''></div>
+
+<div id='win9divPAGECONTAINER'>
+<table class='PSPAGECONTAINER'>
+<tr>
+<td>
+<div id='win9divPSPAGECONTAINER'>
+<table border='0' id='ACE_width' cellpadding='0' cellspacing='0' class='PSPAGECONTAINER' cols='3' width='323'>
+<tr>
+<td width='12' height='10'></td>
+<td width='268'></td>
+<td width='43'></td>
+</tr>
+
+<tr>
+<td height='24'></td>
+<td colspan='2' valign='top' align='left'>
+<div id='win9divDERIVED_SSS_SCL_SSS_SC_LNK1_URL2'><span class='NW_PGLT_GREEN_FONT' title='URL'><a name='DERIVED_SSS_SCL_SSS_SC_LNK1_URL2' id='DERIVED_SSS_SCL_SSS_SC_LNK1_URL2' ptlinktgt='pt_replace' tabindex='14' href="javascript:submitAction_win9(document.win9,'DERIVED_SSS_SCL_SSS_SC_LNK1_URL2');" class='NW_PGLT_GREEN_FONT'>Enrollment Appointment/Dates</a></span></div>
+</td>
+</tr>
+
+<tr>
+<td height='23'></td>
+<td colspan='2' valign='top' align='left'>
+<div id='win9div$ICField3'><span class='NW_PGLT_GREEN_FONT'><a name='$ICField3' id='$ICField3' ptlinktgt='pt_replace' tabindex='15' href="javascript:submitAction_win9(document.win9,'$ICField3');" class='NW_PGLT_GREEN_FONT'>Enrollment</a></span></div>
+</td>
+</tr>
+
+<tr>
+<td height='25'></td>
+<td colspan='2' valign='top' align='left'>
+<div id='win9divDERIVED_NWSS_HP_'><span class='NW_PGLT_GREEN_FONT'><a name='DERIVED_NWSS_HP_' id='DERIVED_NWSS_HP_' ptlinktgt='pt_replace' tabindex='16' href="javascript:submitAction_win9(document.win9,'DERIVED_NWSS_HP_');" class='NW_PGLT_GREEN_FONT'>Shopping Cart</a></span></div>
+</td>
+</tr>
+
+<tr>
+<td height='24'></td>
+<td colspan='2' valign='top' align='left'>
+<div id='win9div$ICField5'><span class='NW_PGLT_GREEN_FONT'><a name='$ICField5' id='$ICField5' ptlinktgt='pt_replace' tabindex='17' href="javascript:submitAction_win9(document.win9,'$ICField5');" class='NW_PGLT_GREEN_FONT'>View My Holds</a></span></div>
+</td>
+</tr>
+
+<tr>
+<td height='3'></td>
+<td rowspan='2' valign='top' align='left'>
+<div id='win9divDERIVED_NWSS_HP_SSS_SC_LNK1_URL3'><span class='NW_PGLT_RED_FONT' title='URL'><a name='DERIVED_NWSS_HP_SSS_SC_LNK1_URL3' id='DERIVED_NWSS_HP_SSS_SC_LNK1_URL3' ptlinktgt='pt_replace' tabindex='22' href="javascript:submitAction_win9(document.win9,'DERIVED_NWSS_HP_SSS_SC_LNK1_URL3');" class='NW_PGLT_RED_FONT'>Exam Schedule</a></span></div>
+</td>
+</tr>
+
+<tr>
+<td height='15'></td>
+<td valign='top' align='left'>
+<div id='win9divDERIVED_NWSS_HP_DESCR10'><span class='PSHYPERLINK' title='Description'><a name='DERIVED_NWSS_HP_DESCR10' id='DERIVED_NWSS_HP_DESCR10' ptlinktgt='pt_peoplecode' tabindex='21' href="javascript:submitAction_win9(document.win9,'DERIVED_NWSS_HP_DESCR10');" class='PSHYPERLINK'>More...</a></span></div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</form>
+
+<a name='ICLastAnchor_win9'></a> 
+
+<div id='popupDragFrame' class='popupDragFrame'>&nbsp;</div>
+
+<!-- Mouse-over popup Begin -->
+<div id='MOpopupDiv' style='display:none; position:absolute; top:0; left:0'>t</div>
+
+<table id='MOpopupContainer' width='20' border='0' cellpadding='0' cellspacing='0' style='display:none; position:absolute; top:0; left:0' onmouseover="MOpopupObj_win9.StartPopup('MOpopupContainer', '');" onmouseout="MOpopupObj_win9.StopPopup();">
+<tr>
+<td><img src='https://ses.ent.northwestern.edu/cs/caesar/cache_PT852/PT_TLEFT_CORNER_ALPHA_1.PNG' width='14' height='15' alt=''></td>
+<td height='11' class='MOBGImageTop'><img src='https://ses.ent.northwestern.edu/cs/caesar/cache_PT852/PT_TRANS_PIX_1.GIF' width='1' height='1' alt=''></td>
+<td><img src='https://ses.ent.northwestern.edu/cs/caesar/cache_PT852/PT_TRIGHT_CORNER_ALPHA_1.PNG' width='19' height='15' alt=''></td>
+</tr>
+
+<tr>
+<td height='25' class='MOBGImageLeft'>&nbsp;</td>
+<td id='MOpopupInner' height='25' width='20' align='left' valign='top' background='https://ses.ent.northwestern.edu/cs/caesar/cache_PT852/PT_BG_GRADIENT_BINARY_1.PNG' class='MOBGImage'>
+<div id='MOdivpopupFrame' tabindex='-1' onclick='MOpopupObj_win9.SetFocusFlag(false);' style='overflow:auto; width:20px; height: 60px;'>test</div>
+</td>
+<td height='45' align='left' valign='bottom' class='MOBGImageRightAlpha'><img src='https://ses.ent.northwestern.edu/cs/caesar/cache_PT852/PT_RIGHT_SHADOW_ALPHA_1.PNG' width='14' height='57' alt=''></td>
+</tr>
+
+<tr>
+<td valign='top'><img src='https://ses.ent.northwestern.edu/cs/caesar/cache_PT852/PT_BLEFT_CORNER_ALPHA_1.PNG' width='14' height='17' alt=''></td>
+<td class='MOBGImagebottomAlpha'></td>
+<td><img src='https://ses.ent.northwestern.edu/cs/caesar/cache_PT852/PT_BRIGHT_CORNER_ALPHA_1.PNG' width='20' height='18' alt=''></td>
+</tr>
+</table>
+
+<!-- Mouse-over popup End  --><!-- Embedded Help popup Begin -->
+<div id='HelppopupDiv' style='display:none; position:absolute; top:0; left:0'>t</div>
+
+<div id='HelpDragFrame' class='popupDragFrame'>&nbsp;</div>
+
+<table id='HelppopupContainer' width='20' border='0' cellpadding='0' cellspacing='0' style='opacity:1; display:none; position:absolute; top:0; left:0'>
+<tr>
+<td id='HelppopupInner' align='left' valign='top' style='position:absolute;z-Index:302;'>
+<div id='HelppopupTitleBar' style='width:341px'>
+<div id='HelppopupTitleBarMiddle' style='width:333px' dir='ltr'>
+<table>
+<tr>
+<td id='HelppopupTitle' style='width:290px; cursor: move;'><span class='PTPOPUP_TITLE'>Help</span></td>
+<td style='width:45px'><img id='#HELPPOPUPCLOSE' style='cursor:pointer' title='Close' alt='Close' align='right' onclick='HelppopupObj_win9.StopPopup();' src='https://ses.ent.northwestern.edu/cs/caesar/cache_PT852/PT_PORTAL_IC_CLOSE_1.gif'></td>
+</tr>
+</table>
+</div>
+</div>
+
+<div id='HelpdivpopupFrame' class='MOBGImage' tabindex='-1' onclick='HelppopupObj_win9.SetFocusFlag(false);' style='border: 1px #bcbaba solid; padding:12px; overflow:auto;'>test</div>
+
+<div id='HelppopupShadow' class='popupShadow' style='position:absolute;z-index:-1;'>
+<div id='HelppopupShadowTopRightCorner' class='popupShadowTopRightCorner' style='height:10px;'>&nbsp;</div>
+
+<div id='HelppopupShadowTop' class='popupShadowTop'>&nbsp;</div>
+
+<div id='HelppopupShadowBottom' class='popupShadowBottom' style='height:10px'>
+<div id='HelppopupShadowBottomLeftCorner' class='popupShadowBottomLeftCorner' style='height:10px;width:10px'>&nbsp;</div>
+
+<div id='HelppopupShadowBottomMiddle' class='popupShadowBottomMiddle' style='height:10px;'>&nbsp;</div>
+
+<div id='HelppopupShadowBottomRightCorner' class='popupShadowBottomRightCorner' style='height:10px;width:10px'>&nbsp;</div>
+</div>
+</div>
+</td>
+</tr>
+</table>
+
+<!-- Embedded Help popup End  -->
+<div id='pt_fakeBC' style='display:none'>
+<ul>
+<li class="pthnavhiearchysep pthbcdispiblock">&nbsp;</li>
+
+<li class="pthnavbarcref ptabncrefbc ptfakercfbc pthbcdispiblock" id="pthnavbccref_PT_FAKE_NWSS_ENRL_PGLT_GBL"><a class="abnanchor" href="https://ses.ent.northwestern.edu/psc/caesar_9/EMPLOYEE/HRMS/c/NWSS_PAGELETS.NWSS_ENRL_PGLT.GBL?target=NWSS_ENRL_PGLT_GBL&amp;pageletname=NWSS_ENRL_PGLT_GBL&amp;&amp;redirect=false&amp;pageletname=NWSS_ENRL_PGLT_GBL&amp;redirect=false&amp;PortalRegistryName=EMPLOYEE&amp;PortalServletURI=https%3a%2f%2fses.ent.northwestern.edu%2fpsp%2fcaesar%2f&amp;PortalURI=https%3a%2f%2fses.ent.northwestern.edu%2fpsc%2fcaesar%2f&amp;PortalHostNode=HRMS&amp;PortalIsPagelet=true&amp;NoCrumbs=yes&amp;PortalCrefName=NWSS_ENRL_PGLT_GBL" role="menuitem" target="TargetContent">Enrollment</a>
+<div class="pthnavcrefimg">&nbsp;</div>
+</li>
+</ul>
+</div>
+
+<script type="text/javascript" language='JavaScript'>
+var bCleanHtml = true;
+var bDefer = true;
+document.deferFldArr_win9 = new Array();
+document.hiddenFldArr_win9 =new Array('ICType','ICElementNum','ICStateNum','ICAction','ICXPos','ICYPos','ResponsetoDiffFrame','TargetFrameName','GSrchRaUrl','FacetPath','ICFocus','ICSaveWarningFilter','ICChanged','ICResubmit','ICSID','ICActionPrompt','ICFromPagelet','ICResubmitURL','ICContentURL','ICFind','ICAddCount');
+document.chgFldArr_win9 = new Array();
+</script>
+</body>
+</html>
+
