@@ -34,7 +34,7 @@ class ResultView(TemplateView):
 
     def get_context_data(self, **kwargs):
         context = super(ResultView, self).get_context_data(**kwargs)
-        department = self.kwargs['department']
+        department = self.get_queryset()
         context['department'] = department
 
         # year = self.kwargs['year']
