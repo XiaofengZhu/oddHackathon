@@ -11,7 +11,7 @@ class IndexView(TemplateView):
 
     def get_queryset(self):
         list = readJson()
-        print list
+        # print list
         return list
 
 

@@ -26,14 +26,14 @@
   <option>5</option>
 </select>
 
-% if object_list:
-	<label class="control-label" for="inputSuccess1">Please choose a year</label>
-	<select class="form-control">
-	% for item in object_list['term']:
-	  <option>1</option>
-	% endfor
-	</select>
-% endif
+# % if object_list:
+<label class="control-label" for="inputSuccess1">Please choose a year</label>
+<select class="form-control">
+% for item in object_list:
+  <option>1</option>
+% endfor
+</select>
+# % endif
 
 </div>
 <button id="search" class="btn btn-default">Search</button>
