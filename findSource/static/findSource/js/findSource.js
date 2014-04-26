@@ -1,5 +1,5 @@
 $("#search").click(function (){
-    var department = $('#user-department').val();
+    var department = $('#department').val();
     if (department){
         current_url = window.location.pathname;
         window.location.href = current_url + department;
