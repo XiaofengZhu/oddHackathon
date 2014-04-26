@@ -29,8 +29,8 @@
 % if object_list:
 	<label class="control-label" for="inputSuccess1">Please choose a year</label>
 	<select class="form-control">
-	% for item in object_list['term']:
-	  <option>1</option>
+	% for item in object_list:
+	  <option>${ object_list['title'] }</option>
 	% endfor
 	</select>
 % endif

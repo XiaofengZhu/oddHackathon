@@ -3,14 +3,14 @@ from django.http import HttpResponse
 from django.views.generic import TemplateView, ListView
 
 from findSource.AlchemyTest.processdata import readJson
-
+from findSource.AlchemyTest.alchemytest import readArticle
 # Create your views here.
 
 class IndexView(TemplateView):
     template_name = 'findSource/index.html'
 
     def get_queryset(self):
-        list = readJson()
+        list = readArticle("http://www.bloomberg.com/news/2013-08-13/florida-to-sue-georgia-in-u-s-supreme-court-over-water.html")
         # print list
         return list
 
