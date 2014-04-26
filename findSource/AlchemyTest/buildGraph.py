@@ -48,8 +48,8 @@ def getGraph(term_id = "4530",search_terms=""):
 	return data
 
 
-if __name__ == "__main__":
-	graph = getGraph(search_terms="management science")
-	f = open("asia.json","w")
-	f.write(json.dumps(graph))
-	f.close()
+# if __name__ == "__main__":
+# 	graph = getGraph(search_terms="management science")
+# 	f = open("asia.json","w")
+# 	f.write(json.dumps(graph))
+# 	f.close()
