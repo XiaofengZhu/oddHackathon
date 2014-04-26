@@ -1,4 +1,0 @@
-hackathon
-=========
-
-NU Hackathon
