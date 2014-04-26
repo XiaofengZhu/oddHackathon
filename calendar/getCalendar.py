@@ -41,29 +41,36 @@ def next_weekday(d, weekday):
 #next_monday = next_weekday(d, 0) # 0 = Monday, 1=Tuesday, 2=Wednesday...
 #print(next_monday)
 #####################################
-
-fileDirectory = input('please enter your html file name with no .html extention');
-if fileDirectory==None:
-    fileDirectory='enrollment'
-soup = BeautifulSoup(open('./'+fileDirectory+'_files/SA_LEARNER_SERVICES.SSS_STUDENT_CENTER.html'))
-classes = soup.findAll("span", { "class" : "PSHYPERLINKDISABLED" })
-classIds = [];
-for c in classes:
-    print "processing:",c
-    classnumtemp = re.findall(r'\([0-9]+\)',str(c))
-    if(len(classnumtemp)>=1):
-        classnum = classnumtemp[0][1:-1];
-    #if(re.findall('id=".*?"',str(c))[0][4]=='E'):
-        classIds.append(classnum);
-#those are just examples for classIds
+option = input('options:\n \t type a if you have your html file in this folder\n \t type b if you have a list of course nums to input\n');
+if(option.lower()=='a'):
+    fileDirectory = input('please enter your html file name with no .html extention. Example: \'enrollment\' \n');
+    if fileDirectory==None:
+        fileDirectory='enrollment'
+    soup = BeautifulSoup(open('./'+fileDirectory+'_files/SA_LEARNER_SERVICES.SSS_STUDENT_CENTER.html'))
+    classes = soup.findAll("span", { "class" : "PSHYPERLINKDISABLED" })
+    classIds = [];
+    for c in classes:
+        print "processing:",c
+        classnumtemp = re.findall(r'\([0-9]+\)',str(c))
+        if(len(classnumtemp)>=1):
+            classnum = classnumtemp[0][1:-1];
+        #if(re.findall('id=".*?"',str(c))[0][4]=='E'):
+            classIds.append(classnum);
+else:
+    classIds = input('Please enter the list of course nums here. Example: [40613,40615]\n');#those are just examples for classIds
 print classIds;
+
 classIds = [40613,40615]
+print "skipped original course numbers", "new course number: ",classIds
 classesInfo = {};
 #creating calendar
 cal = Calendar();
 for classId in classIds:
     data = requests.get('http://vazzak2.ci.northwestern.edu/courses/?class_num='+str(classId))
     classesInfo[classId] = {};
+    if(len(data.json())==0):
+        print "no information was found for course num ",classId
+        continue;
     classesInfo[classId] = data.json()[0];
     classesInfo[classId]['meeting_days'] = convert_meeting_days(classesInfo[classId]['meeting_days'])
     for meetDay in classesInfo[classId]['meeting_days']:
@@ -81,8 +88,11 @@ for classId in classIds:
         endDate = classesInfo[classId]['end_date']+' 00:00:00';
         endDate = datetime.strptime(endDate, '%Y-%m-%d %H:%M:%S')
         days = (endDate - startTime).days
+        print 'startDate:',startTime
+        print 'startDateEndTime',endTime
+        print 'endDate:',endDate
         print 'days:', days;
-        weeks = days/7  
+        weeks = days/7+1  
         event = Event();
         event.add('summary', classesInfo[classId]['title']);
         event.add('dtstart',startTime)
