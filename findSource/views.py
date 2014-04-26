@@ -6,7 +6,7 @@ from findSource.AlchemyTest.alchemytest import readArticle
 # Create your views here.
 
 class IndexView(TemplateView):
-    template_name = 'findSource/about.html'
+    template_name = 'findSource/index.html'
 
     def get_context_data(self, **kwargs):
         context = super(IndexView, self).get_context_data(**kwargs)
@@ -17,9 +17,9 @@ class ResultView(ListView):
 
     def get_queryset(self):
         url = self.kwargs['userInput']
-        list = readArticle(url)
-        #print list
-        return list
+        # list = readArticle(url)
+        # #print list
+        # return list
 
     def get_context_data(self, **kwargs):
         context = super(ResultView, self).get_context_data(**kwargs)
@@ -28,4 +28,4 @@ class ResultView(ListView):
         return context
 
 class AboutView(TemplateView):
-    template_name = 'findSource/index.html'
+    template_name = 'findSource/about.html'

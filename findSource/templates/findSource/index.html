@@ -1,5 +1,5 @@
 <%inherit file="base.html" />
-<%def name="title()">Sourcerous</%def>
+<%def name="title()">Hackathon</%def>
 <%def name="js_defer()">
     ${ parent.js_defer()}
     <script type="text/javascript" src="/static/findSource/js/findSource.js"></script>
@@ -8,12 +8,12 @@
     ${ parent.css_files() }
 </%def>
 
-<h3>Hello, this is Sourcerous</h3>
+<h3>Hello, this is Hackathon</h3>
 <br>
 
-<div class="form-group">
-    <label for="user-input">Please input an url for article</label>
-    <input class="form-control" id="user-input" placeholder="http://">
+<><div class="form-group">
+    <label for="user-input">Please input a key word</label>
+    <input class="form-control" id="user-input" placeholder="Machine Learning">
 </div>
 <button id="search" class="btn btn-default">Search</button>
 

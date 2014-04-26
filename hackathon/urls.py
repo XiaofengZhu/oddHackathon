@@ -13,7 +13,7 @@ urlpatterns = patterns('',
 
     url(r'^$', views.IndexView.as_view(), name="homepage"),
     url(r'^admin/', include(admin.site.urls)),
-    url(r'Sourcerous/', include('findSource.urls', namespace = 'findSource')),
+    url(r'hackathon/', include('findSource.urls', namespace = 'findSource')),
 )
 
 urlpatterns += patterns('django.contrib.staticfiles.views',
