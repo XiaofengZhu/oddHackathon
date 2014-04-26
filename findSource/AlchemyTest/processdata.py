@@ -3,18 +3,20 @@ import sys, json
 def readJson():
 
 	#return list
-	output = []
+	# output = []
 
 	f = open('/static/findSource/data/termDetails.txt','r')
 	jsonObj = json.loads(f.read())
 
-	for obj in jsonObj:  
-	    termDict={}
-	    termDict['id']=obj['id']
-	    termDict['year']=obj['year']
-	    termDict['quarter']=obj['quarter']
+	# for obj in jsonObj:  
+	#     termDict={}
+	#     termDict['id']=obj['id']
+	#     termDict['year']=obj['year']
+	#     termDict['quarter']=obj['quarter']
 
-	    output.append(termDict)
+	#     output.append(termDict)
+
+
 	# years = list(set([i['year']for i in jsonObj])) #[2005,2007,....]
 	# output['years'] = years
 
@@ -23,4 +25,5 @@ def readJson():
 
 	f.close()
 
-	return output
+	# return output
+	return jsonObj
