@@ -1,12 +1,13 @@
 import urllib
 import json
 
-def readJson():
+def readJson(choice):
 
 	#return list
 	output={}
 
-	url="http://vazzak2.ci.northwestern.edu/terms/"
+	url="http://vazzak2.ci.northwestern.edu/"
+	url=url+choice+"/"
 	page=urllib.urlopen(url)
 	data=page.read()
 

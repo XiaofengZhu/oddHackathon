@@ -19,16 +19,20 @@
 
   <label class="control-label" for="inputSuccess1">Please choose a department</label>
   <select class="form-control" id ="department">
-    <option>EECS</option>
+      % for item in subjects:
+        <option>${item['name']}</option>   
+      %endfor
+      <option>Accounting</option>
+    <!--option>EECS</option>
     <option>Accounting</option>
     <option>Advertising</option>
     <option>History</option>
-    <option>Business Law</option>
+    <option>Business Law</option-->
   </select>
   <br>
 
 
-  <label class="control-label" for="inputSuccess1">Please choose a year</label>
+  <!--label class="control-label" for="inputSuccess1">Please choose a year</label>
   <select class="form-control" id ="year">
 
     <option> 2014 </option>  
@@ -65,13 +69,13 @@
     <option>Winter</option> 
 
   </select>
-  <br>
+  <br-->
 
-  % if result:
+  % if terms:
     <label class="control-label" for="inputSuccess1">Please choose a term</label>
     <select class="form-control" id="quater">
-      % for item in result:
-        <option>item['name']</option>   
+      % for item in terms:
+        <option>${item['name']}</option>   
       %endfor
     </select>
   % endif

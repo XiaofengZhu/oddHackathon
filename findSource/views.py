@@ -11,15 +11,18 @@ from findSource.AlchemyTest.calTermId import calTerm
 class IndexView(TemplateView):
     template_name = 'findSource/index.html'
 
-    def get_queryset(self):
-        list = readJson()
-        # print list
-        return list
+    def get_terms(self):
+        list_term = readJson('terms')
+        return list_term
 
+    def get_subjects(self):
+        list_subject = readJson('subjects')
+        return list_subject
 
     def get_context_data(self, **kwargs):
         context = super(IndexView, self).get_context_data(**kwargs)
-        context['result'] = self.get_queryset()        
+        context['subjects'] = self.get_subjects()      
+        context['term'] = self.get_terms()             
         return context
 
 class ResultView(ListView):
