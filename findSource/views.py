@@ -26,7 +26,7 @@ class IndexView(TemplateView):
         context['terms'] = self.get_terms()             
         return context
 
-class ResultView(TemplateView):
+class ResultsView(TemplateView):
     template_name = 'findSource/results.html'
 
     def get_queryset(self):
@@ -54,7 +54,7 @@ class ResultView(TemplateView):
         return context
 
 
-class Result_View(TemplateView):
+class ResultView(TemplateView):
     template_name = 'findSource/result.html'
 
     def get_queryset(self):
@@ -77,7 +77,7 @@ class Result_View(TemplateView):
         f = open('asia.json','w')
 
         context['graphpath']=os.path.abspath('asia.json')      
-          
+
         f.write(json.dumps(graph))
         f.close()
 
